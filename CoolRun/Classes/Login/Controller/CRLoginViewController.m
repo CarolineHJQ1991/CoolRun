@@ -24,7 +24,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    UIImageView *leftVN = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon"]];
+    leftVN.contentMode = UIViewContentModeCenter;
+    leftVN.frame = CGRectMake(0, 0, 55, 20);
+    self.userNameField.leftViewMode = UITextFieldViewModeAlways;
+    self.userNameField.leftView = leftVN;
     
+    UIImageView *leftVP = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lock"]];
+    leftVP.contentMode = UIViewContentModeCenter;
+    leftVP.frame = CGRectMake(0, 0, 55, 20);
+    self.userPasswdField.leftViewMode = UITextFieldViewModeAlways;
+    self.userPasswdField.leftView = leftVP;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
