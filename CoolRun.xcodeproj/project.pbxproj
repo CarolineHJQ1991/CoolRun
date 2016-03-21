@@ -15,6 +15,8 @@
 		82755F6F1C98CCA900385A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82755F6D1C98CCA900385A49 /* LaunchScreen.storyboard */; };
 		82755F7A1C98CCA900385A49 /* CoolRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82755F791C98CCA900385A49 /* CoolRunTests.m */; };
 		82755F851C98CCA900385A49 /* CoolRunUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82755F841C98CCA900385A49 /* CoolRunUITests.m */; };
+		827561031C9E7E1900385A49 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827561021C9E7E1900385A49 /* Login.storyboard */; };
+		827561081C9EC86300385A49 /* CRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 827561071C9EC86300385A49 /* CRLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,8 @@
 /* Begin PBXFileReference section */
 		82755F5C1C98CCA900385A49 /* CoolRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82755F601C98CCA900385A49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		82755F621C98CCA900385A49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		82755F631C98CCA900385A49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		82755F621C98CCA900385A49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		82755F631C98CCA900385A49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		82755F651C98CCA900385A49 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82755F661C98CCA900385A49 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82755F691C98CCA900385A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,9 @@
 		82755F801C98CCA900385A49 /* CoolRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82755F841C98CCA900385A49 /* CoolRunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolRunUITests.m; sourceTree = "<group>"; };
 		82755F861C98CCA900385A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827561021C9E7E1900385A49 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = ../Login.storyboard; sourceTree = "<group>"; };
+		827561061C9EC86300385A49 /* CRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLoginViewController.h; sourceTree = "<group>"; };
+		827561071C9EC86300385A49 /* CRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +106,9 @@
 		82755F5E1C98CCA900385A49 /* CoolRun */ = {
 			isa = PBXGroup;
 			children = (
-				82755F621C98CCA900385A49 /* AppDelegate.h */,
-				82755F631C98CCA900385A49 /* AppDelegate.m */,
+				827560FB1C9E79F700385A49 /* Classes */,
 				82755F651C98CCA900385A49 /* ViewController.h */,
 				82755F661C98CCA900385A49 /* ViewController.m */,
-				82755F681C98CCA900385A49 /* Main.storyboard */,
 				82755F6B1C98CCA900385A49 /* Assets.xcassets */,
 				82755F6D1C98CCA900385A49 /* LaunchScreen.storyboard */,
 				82755F701C98CCA900385A49 /* Info.plist */,
@@ -138,6 +141,83 @@
 				82755F861C98CCA900385A49 /* Info.plist */,
 			);
 			path = CoolRunUITests;
+			sourceTree = "<group>";
+		};
+		827560FB1C9E79F700385A49 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				827560FC1C9E79F700385A49 /* Category */,
+				827560FD1C9E79F700385A49 /* Lib */,
+				827560FE1C9E79F700385A49 /* Login */,
+				827560FF1C9E79F700385A49 /* Main */,
+				827561001C9E79F700385A49 /* Other */,
+				827561011C9E79F700385A49 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		827560FC1C9E79F700385A49 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		827560FD1C9E79F700385A49 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		827560FE1C9E79F700385A49 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				827561041C9EC76500385A49 /* Controller */,
+				827561051C9EC78000385A49 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		827560FF1C9E79F700385A49 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				82755F681C98CCA900385A49 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		827561001C9E79F700385A49 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				82755F621C98CCA900385A49 /* AppDelegate.h */,
+				82755F631C98CCA900385A49 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		827561011C9E79F700385A49 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		827561041C9EC76500385A49 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				827561061C9EC86300385A49 /* CRLoginViewController.h */,
+				827561071C9EC86300385A49 /* CRLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		827561051C9EC78000385A49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				827561021C9E7E1900385A49 /* Login.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827561031C9E7E1900385A49 /* Login.storyboard in Resources */,
 				82755F6F1C98CCA900385A49 /* LaunchScreen.storyboard in Resources */,
 				82755F6C1C98CCA900385A49 /* Assets.xcassets in Resources */,
 				82755F6A1C98CCA900385A49 /* Main.storyboard in Resources */,
@@ -276,6 +357,7 @@
 				82755F671C98CCA900385A49 /* ViewController.m in Sources */,
 				82755F641C98CCA900385A49 /* AppDelegate.m in Sources */,
 				82755F611C98CCA900385A49 /* main.m in Sources */,
+				827561081C9EC86300385A49 /* CRLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +399,7 @@
 				82755F691C98CCA900385A49 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		82755F6D1C98CCA900385A49 /* LaunchScreen.storyboard */ = {
@@ -418,6 +501,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caroline.CoolRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,6 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caroline.CoolRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -499,6 +584,7 @@
 				82755F8B1C98CCA900385A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82755F8C1C98CCA900385A49 /* Build configuration list for PBXNativeTarget "CoolRunTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +593,7 @@
 				82755F8E1C98CCA900385A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82755F8F1C98CCA900385A49 /* Build configuration list for PBXNativeTarget "CoolRunUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +602,7 @@
 				82755F911C98CCA900385A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
