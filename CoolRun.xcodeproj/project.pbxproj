@@ -149,6 +149,7 @@
 		827562DB1CA04D2400385A49 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562DA1CA04D2400385A49 /* libresolv.tbd */; };
 		827562DF1CA06EE000385A49 /* CRUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562DE1CA06EE000385A49 /* CRUserInfo.m */; };
 		827562E31CA077F600385A49 /* CRXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562E21CA077F600385A49 /* CRXMPPTool.m */; };
+		827562E61CA08FB700385A49 /* CRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562E51CA08FB700385A49 /* CRRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -461,6 +462,8 @@
 		827562E01CA06FAA00385A49 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		827562E11CA077F600385A49 /* CRXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRXMPPTool.h; sourceTree = "<group>"; };
 		827562E21CA077F600385A49 /* CRXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRXMPPTool.m; sourceTree = "<group>"; };
+		827562E41CA08FB700385A49 /* CRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRegisterViewController.h; sourceTree = "<group>"; };
+		827562E51CA08FB700385A49 /* CRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,6 +628,8 @@
 			children = (
 				827561061C9EC86300385A49 /* CRLoginViewController.h */,
 				827561071C9EC86300385A49 /* CRLoginViewController.m */,
+				827562E41CA08FB700385A49 /* CRRegisterViewController.h */,
+				827562E51CA08FB700385A49 /* CRRegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1595,6 +1600,7 @@
 				827562CC1CA04C2600385A49 /* DDFileLogger.m in Sources */,
 				827562931CA04C2600385A49 /* XMPPvCardTempAdr.m in Sources */,
 				827562A21CA04C2600385A49 /* XMPPDateTimeProfiles.m in Sources */,
+				827562E61CA08FB700385A49 /* CRRegisterViewController.m in Sources */,
 				8275626F1CA04C2600385A49 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				827562D31CA04C2600385A49 /* DDXMLDocument.m in Sources */,
 				827562C91CA04C2600385A49 /* GCDAsyncSocket.m in Sources */,

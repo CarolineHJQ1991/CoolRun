@@ -80,8 +80,13 @@ singleton_implementation(CRXMPPTool)
 }
 
 
-- (void)userLogin:(CRXMPPResultBlock) block{
+- (void)userLogin:(CRXMPPResultBlock) block {
     //[self setupXMPPStream];
+    _resultBlock = block;
+    [self connectToServer];
+}
+
+- (void)userResgiter:(CRXMPPResultBlock)block {
     _resultBlock = block;
     [self connectToServer];
 }

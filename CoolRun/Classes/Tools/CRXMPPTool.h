@@ -12,7 +12,9 @@
 typedef enum {
     CRXMPPResultTypeLoginSuccess,
     CRXMPPResultTypeLoginFaild,
-    CRXMPPResultTypeNetError
+    CRXMPPResultTypeNetError,
+    CRXMPPResultTypeRegisterSuccess,
+    CRXMPPResultTypeRegisterFaild,
 }CRXMPPResultType;
 
 typedef void(^CRXMPPResultBlock)(CRXMPPResultType type);
@@ -22,10 +24,6 @@ singleton_interface(CRXMPPTool)
 
 @property (strong,nonatomic) XMPPStream *xmppStream;
 - (void) userLogin:(CRXMPPResultBlock) block;
-
-- (void) setupXMPPStream;
-- (void) connectToServer;
-- (void) sendPassword;
-- (void) sendOnline;
+- (void) userResgiter:(CRXMPPResultBlock) block;
 
 @end
