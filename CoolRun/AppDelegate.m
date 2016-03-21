@@ -29,6 +29,7 @@
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
 }
 - (void) connectToServer {
+    [self.xmppStream disconnect];
     if (self.xmppStream == nil) {
         [self setupXMPPStream];
     }
