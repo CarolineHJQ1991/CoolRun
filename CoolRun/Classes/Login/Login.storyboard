@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-th-EWe">
-                                        <rect key="frame" x="0.0" y="50" width="520" height="40"/>
+                                        <rect key="frame" x="0.0" y="57" width="520" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2bG-th-EWe" secondAttribute="trailing" id="Anu-c7-kgw"/>
                                     <constraint firstItem="jF0-8z-74H" firstAttribute="top" secondItem="rfZ-wt-rZX" secondAttribute="top" id="DYY-T7-Q7A"/>
                                     <constraint firstAttribute="trailing" secondItem="vEe-os-L3B" secondAttribute="trailing" id="E67-e7-t40"/>
-                                    <constraint firstItem="2bG-th-EWe" firstAttribute="top" secondItem="vEe-os-L3B" secondAttribute="bottom" id="Pg7-j0-xLK"/>
+                                    <constraint firstItem="2bG-th-EWe" firstAttribute="top" secondItem="vEe-os-L3B" secondAttribute="bottom" constant="7" id="Pg7-j0-xLK"/>
                                     <constraint firstItem="jF0-8z-74H" firstAttribute="leading" secondItem="rfZ-wt-rZX" secondAttribute="leading" id="Q8u-Z3-Sh0"/>
                                     <constraint firstItem="vEe-os-L3B" firstAttribute="top" secondItem="rfZ-wt-rZX" secondAttribute="top" constant="10" id="Yaa-Qq-XEq"/>
                                     <constraint firstAttribute="bottom" secondItem="jF0-8z-74H" secondAttribute="bottom" id="kUE-Vx-wQL"/>
