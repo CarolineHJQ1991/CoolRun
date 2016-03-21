@@ -147,6 +147,7 @@
 		827562D71CA04C2600385A49 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562551CA04C2600385A49 /* libidn.a */; };
 		827562D91CA04CEC00385A49 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562D81CA04CEC00385A49 /* libxml2.tbd */; };
 		827562DB1CA04D2400385A49 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562DA1CA04D2400385A49 /* libresolv.tbd */; };
+		827562DF1CA06EE000385A49 /* CRUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562DE1CA06EE000385A49 /* CRUserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -454,6 +455,9 @@
 		827562D81CA04CEC00385A49 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		827562DA1CA04D2400385A49 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		827562DC1CA04F6100385A49 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		827562DD1CA06EE000385A49 /* CRUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRUserInfo.h; sourceTree = "<group>"; };
+		827562DE1CA06EE000385A49 /* CRUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUserInfo.m; sourceTree = "<group>"; };
+		827562E01CA06FAA00385A49 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -604,6 +608,9 @@
 		827561011C9E79F700385A49 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				827562E01CA06FAA00385A49 /* Singleton.h */,
+				827562DD1CA06EE000385A49 /* CRUserInfo.h */,
+				827562DE1CA06EE000385A49 /* CRUserInfo.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1658,6 +1665,7 @@
 				8275625D1CA04C2600385A49 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				8275629C1CA04C2600385A49 /* XMPPIQ+XEP_0060.m in Sources */,
 				827562B31CA04C2600385A49 /* XMPPPresence+XEP_0172.m in Sources */,
+				827562DF1CA06EE000385A49 /* CRUserInfo.m in Sources */,
 				8275629A1CA04C2600385A49 /* NSXMLElement+XEP_0059.m in Sources */,
 				827562811CA04C2600385A49 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				827562891CA04C2600385A49 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
