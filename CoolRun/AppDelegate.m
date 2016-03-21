@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <XMPPStreamDelegate>
 
+- (void) setupXMPPStream;
+- (void) connectToServer;
+- (void) sendPassword;
+- (void) sendOnline;
 @end
 
 @implementation AppDelegate
@@ -20,6 +24,60 @@
     return YES;
 }
 
+- (void) setupXMPPStream {
+    self.xmppStream = [[XMPPStream alloc] init];
+    [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+}
+- (void) connectToServer {
+    if (self.xmppStream == nil) {
+        [self setupXMPPStream];
+    }
+    self.xmppStream.hostName = @"127.0.0.1";
+    self.xmppStream.hostPort = 5222;
+    XMPPJID *myJid = [XMPPJID jidWithString:@"acaroline@tedu.cn"];
+    self.xmppStream.myJID = myJid;
+    NSError *error = nil;
+    [self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error];
+    if (error) {
+        NSLog(@"连接失败！");
+        NSLog(@"%@",error);
+    }
+}
+- (void) sendPassword {
+    NSError *error = nil;
+    [self.xmppStream authenticateWithPassword:@"123456" error:&error];
+    if (error) {
+        NSLog(@"连接失败！");
+        NSLog(@"%@",error);
+    }
+}
+- (void) sendOnline {
+    XMPPPresence *presence = [XMPPPresence presence];
+    [self.xmppStream sendElement:presence];
+}
+
+#pragma mark  XMPPStreamDelegate
+- (void)xmppStreamDidConnect:(XMPPStream *)sender {
+    [self sendPassword];
+}
+
+- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error {
+    if (error) {
+        NSLog(@"%@",error);
+    }
+}
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
+    [self sendOnline];
+}
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error {
+    NSLog(@"%@",error);
+}
+
+
+- (void)userLogin {
+    //[self setupXMPPStream];
+    [self connectToServer];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
