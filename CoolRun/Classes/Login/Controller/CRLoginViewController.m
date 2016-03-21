@@ -7,8 +7,9 @@
 //
 
 #import "CRLoginViewController.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 #import "CRUserInfo.h"
+#import "CRXMPPTool.h"
 @interface CRLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *userPasswdField;
@@ -41,10 +42,26 @@
     CRUserInfo *userInfo = [CRUserInfo sharedCRUserInfo];
     userInfo.userName = self.userNameField.text;
     userInfo.userPasswd = self.userPasswdField.text;
-    AppDelegate *appdel = [UIApplication sharedApplication].delegate;
-    [appdel userLogin];
+    [[CRXMPPTool sharedCRXMPPTool] userLogin:^(CRXMPPResultType type) {
+        <#code#>
+    }];
 }
 
+- (void) handleXmppResult:(CRXMPPResultType) type{
+    switch (type) {
+        case CRXMPPResultTypeLoginSuccess:
+            NSLog(@"登录成功");
+            break;
+        case CRXMPPResultTypeLoginFaild:
+            NSLog(@"登录失败");
+            break;
+        case CRXMPPResultTypeNetError:
+            NSLog(@"网络错误");
+            break;
+        default:
+            break;
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

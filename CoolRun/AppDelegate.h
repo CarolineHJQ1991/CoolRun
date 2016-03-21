@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XMPPFramework.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong,nonatomic) XMPPStream *xmppStream;
-- (void) userLogin;
 @end
 

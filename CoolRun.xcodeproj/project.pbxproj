@@ -148,6 +148,7 @@
 		827562D91CA04CEC00385A49 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562D81CA04CEC00385A49 /* libxml2.tbd */; };
 		827562DB1CA04D2400385A49 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827562DA1CA04D2400385A49 /* libresolv.tbd */; };
 		827562DF1CA06EE000385A49 /* CRUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562DE1CA06EE000385A49 /* CRUserInfo.m */; };
+		827562E31CA077F600385A49 /* CRXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 827562E21CA077F600385A49 /* CRXMPPTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +459,8 @@
 		827562DD1CA06EE000385A49 /* CRUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRUserInfo.h; sourceTree = "<group>"; };
 		827562DE1CA06EE000385A49 /* CRUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUserInfo.m; sourceTree = "<group>"; };
 		827562E01CA06FAA00385A49 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		827562E11CA077F600385A49 /* CRXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRXMPPTool.h; sourceTree = "<group>"; };
+		827562E21CA077F600385A49 /* CRXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRXMPPTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,6 +614,8 @@
 				827562E01CA06FAA00385A49 /* Singleton.h */,
 				827562DD1CA06EE000385A49 /* CRUserInfo.h */,
 				827562DE1CA06EE000385A49 /* CRUserInfo.m */,
+				827562E11CA077F600385A49 /* CRXMPPTool.h */,
+				827562E21CA077F600385A49 /* CRXMPPTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1586,6 +1591,7 @@
 				827562CE1CA04C2600385A49 /* DDTTYLogger.m in Sources */,
 				827562971CA04C2600385A49 /* XMPPvCardTempLabel.m in Sources */,
 				8275628F1CA04C2600385A49 /* XMPPvCardCoreDataStorage.m in Sources */,
+				827562E31CA077F600385A49 /* CRXMPPTool.m in Sources */,
 				827562CC1CA04C2600385A49 /* DDFileLogger.m in Sources */,
 				827562931CA04C2600385A49 /* XMPPvCardTempAdr.m in Sources */,
 				827562A21CA04C2600385A49 /* XMPPDateTimeProfiles.m in Sources */,
