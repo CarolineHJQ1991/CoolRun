@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CRUserInfo.h"
 @interface AppDelegate () <XMPPStreamDelegate>
 
 - (void) setupXMPPStream;
@@ -32,9 +32,12 @@
     if (self.xmppStream == nil) {
         [self setupXMPPStream];
     }
-    self.xmppStream.hostName = @"127.0.0.1";
-    self.xmppStream.hostPort = 5222;
-    XMPPJID *myJid = [XMPPJID jidWithString:@"acaroline@tedu.cn"];
+    self.xmppStream.hostName = CRXMPPHOSTNAME;
+    self.xmppStream.hostPort = CRXMPPPORT;
+    NSString *userName = nil;
+    userName = [CRUserInfo sharedCRUserInfo].userName;
+    NSString *jidStr = [NSString stringWithFormat:@"%@@%@",userName,CRXMPPDOMAIN];
+    XMPPJID *myJid = [XMPPJID jidWithString:jidStr];
     self.xmppStream.myJID = myJid;
     NSError *error = nil;
     [self.xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error];
@@ -45,7 +48,9 @@
 }
 - (void) sendPassword {
     NSError *error = nil;
-    [self.xmppStream authenticateWithPassword:@"123456" error:&error];
+    NSString *userPasswd = nil;
+    userPasswd = [CRUserInfo sharedCRUserInfo].userPasswd;
+    [self.xmppStream authenticateWithPassword:userPasswd error:&error];
     if (error) {
         NSLog(@"连接失败！");
         NSLog(@"%@",error);

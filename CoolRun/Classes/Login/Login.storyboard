@@ -76,6 +76,9 @@
                                 <state key="normal" title="登录" backgroundImage="button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginBtnClick:" destination="Y9b-p3-IX7" eventType="touchUpInside" id="dAX-ee-7ai"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-JB-Tq2">
                                 <rect key="frame" x="70" y="524" width="53" height="53"/>

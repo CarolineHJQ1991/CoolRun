@@ -7,7 +7,8 @@
 //
 
 #import "CRLoginViewController.h"
-
+#import "AppDelegate.h"
+#import "CRUserInfo.h"
 @interface CRLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *userPasswdField;
@@ -21,7 +22,6 @@
     // Do any additional setup after loading the view.
     
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     UIImageView *leftVN = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon"]];
@@ -36,6 +36,15 @@
     self.userPasswdField.leftViewMode = UITextFieldViewModeAlways;
     self.userPasswdField.leftView = leftVP;
 }
+
+- (IBAction)LoginBtnClick:(id)sender {
+    CRUserInfo *userInfo = [CRUserInfo sharedCRUserInfo];
+    userInfo.userName = self.userNameField.text;
+    userInfo.userPasswd = self.userPasswdField.text;
+    AppDelegate *appdel = [UIApplication sharedApplication].delegate;
+    [appdel userLogin];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
