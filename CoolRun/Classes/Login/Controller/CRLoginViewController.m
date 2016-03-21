@@ -43,15 +43,18 @@
     userInfo.userName = self.userNameField.text;
     userInfo.userPasswd = self.userPasswdField.text;
     [[CRXMPPTool sharedCRXMPPTool] userLogin:^(CRXMPPResultType type) {
-        <#code#>
+        [self handleXmppResult:type];
     }];
 }
 
 - (void) handleXmppResult:(CRXMPPResultType) type{
     switch (type) {
-        case CRXMPPResultTypeLoginSuccess:
+        case CRXMPPResultTypeLoginSuccess:{
             NSLog(@"登录成功");
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            [UIApplication sharedApplication].keyWindow.rootViewController = storyboard.instantiateInitialViewController;
             break;
+        }
         case CRXMPPResultTypeLoginFaild:
             NSLog(@"登录失败");
             break;
@@ -67,6 +70,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    NSLog(@"登录控制器 %@",self);
+}
 /*
 #pragma mark - Navigation
 
