@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景图" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-KL-P0K">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfZ-wt-rZX">
                                 <rect key="frame" x="40" y="120" width="520" height="100"/>
@@ -128,6 +128,7 @@
                             <constraint firstItem="1Yo-PU-QoP" firstAttribute="top" secondItem="rfZ-wt-rZX" secondAttribute="bottom" constant="35" id="9Wh-WG-icd"/>
                             <constraint firstItem="xcO-JB-Tq2" firstAttribute="leading" secondItem="KF9-X5-yew" secondAttribute="leading" constant="70" id="B0d-ty-o6Y"/>
                             <constraint firstItem="xcO-JB-Tq2" firstAttribute="top" secondItem="TnB-sI-bXU" secondAttribute="bottom" constant="35" id="IUd-TD-7Oj"/>
+                            <constraint firstItem="Pza-KL-P0K" firstAttribute="top" secondItem="KF9-X5-yew" secondAttribute="top" id="Qli-fJ-IuI"/>
                             <constraint firstItem="Pza-KL-P0K" firstAttribute="top" secondItem="XKn-0X-mhf" secondAttribute="bottom" id="Qvw-mn-yXo"/>
                             <constraint firstAttribute="trailing" secondItem="UIh-rJ-hSz" secondAttribute="trailing" constant="70" id="Sa3-yg-sTy"/>
                             <constraint firstItem="TnB-sI-bXU" firstAttribute="leading" secondItem="KF9-X5-yew" secondAttribute="leading" constant="60" id="Swe-8M-Fei"/>
@@ -146,6 +147,11 @@
                             <constraint firstItem="I37-BN-NlO" firstAttribute="centerX" secondItem="KF9-X5-yew" secondAttribute="centerX" id="wjE-ym-mad"/>
                             <constraint firstItem="aDV-9O-rYU" firstAttribute="top" secondItem="Pza-KL-P0K" secondAttribute="bottom" id="zNS-xX-PUw"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Qvw-mn-yXo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="userNameField" destination="vEe-os-L3B" id="CzM-cs-sx7"/>
